@@ -8,7 +8,7 @@
 
 using namespace std;
 
-Monster get_monster(string monster){
+Monster get_monster(const string& monster){
     if (monster == "Vaporeon"){
         return Vaporeon();
     } else if (monster == "Flareon"){
@@ -24,7 +24,7 @@ Monster get_monster(string monster){
     }
 }
 
-char get_move_type(string move_type){
+char get_move_type(const string& move_type){
     if (move_type == "Water"){
         return WATER;
     } else if (move_type == "Fire"){
@@ -39,7 +39,7 @@ char get_move_type(string move_type){
     }
 }
 
-char get_move_category(string move_category){
+char get_move_category(const string& move_category){
     if (move_category == "S"){
         return SPECIAL;
     } else {
@@ -48,14 +48,14 @@ char get_move_category(string move_category){
 
 }
 
-vector<string> split(string str, char del){
-    string temp = "";
+vector<string> split(const string& str, char del){
+    string temp;
 
     vector<string> string_vector;
 
-    for (int i = 0; i < (int) str.size(); i++){
-        if (str[i] != del){
-            temp += str[i];
+    for (char i : str){
+        if (i != del){
+            temp += i;
         } else {
             string_vector.push_back(temp);
             temp = "";
@@ -66,12 +66,12 @@ vector<string> split(string str, char del){
     return string_vector;
 }
 
-string strip(string line){
-    int space_index = line.find_first_of(' ');
-    int r_index = line.find_first_of('\r');
+string strip(const string& line){
+    int space_index = (int) line.find_first_of(' ');
+    int r_index = (int) line.find_first_of('\r');
     int strip_index;
     if (space_index == -1 and r_index == -1){
-        strip_index = line.size();
+        strip_index = (int) line.size();
     } else if (space_index == -1) {
         strip_index = r_index;
     } else if (r_index == -1){
@@ -83,7 +83,7 @@ string strip(string line){
     return line.substr(0, strip_index);
 }
 
-vector<Monster> read_data(string filename){
+vector<Monster> read_data(const string& filename){
 	string line_data;
 	ifstream file(filename);
     if (file.fail()){

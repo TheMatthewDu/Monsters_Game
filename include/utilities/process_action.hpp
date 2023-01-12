@@ -11,6 +11,6 @@ using namespace std;
 // Client to server actions
 #define ATTACK 50
 
-void generate_message(int fd, char action, string msg);
+void generate_message(int fd, char action, const string& msg);
 
 tuple<char, string> read_message(int fd);

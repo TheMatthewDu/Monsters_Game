@@ -8,4 +8,4 @@
 #define ELECTRIC 2
 #define GRASS 3
 
-double compute_type_matchup(char attacking, char defending);
+double compute_type_matchup(unsigned char attacking, unsigned char defending);

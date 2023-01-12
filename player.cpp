@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstring>
 #include "client.hpp"
 
 int main(int argc, char **argv) {
@@ -8,7 +7,7 @@ int main(int argc, char **argv) {
 		exit(0);
 	}
 
-	GamePlayer player = GamePlayer((int) strtol(argv[1], NULL, 10));
+	auto player = GamePlayer((int) strtol(argv[1], nullptr, 10));
 	player.connect_to_server();
 	player.run();
 	return 0;

@@ -23,6 +23,6 @@
 #include "Jolteon.hpp"
 #endif
 
-vector<Monster> read_data(string filename);
+vector<Monster> read_data(const string& filename);
 
 #endif // READ_DATA_HPP
