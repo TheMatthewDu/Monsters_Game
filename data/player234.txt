@@ -1,0 +1,11 @@
+Leafeon
+Giga_Drain 75 Grass S
+Energy_Ball 90 Grass S
+Leaf_Blade 90 Grass P
+Seed_Bomb 80 Grass P
+---
+Jolteon
+Thunderbolt 90 Electric S
+Discharge 80 Electric S
+Thunder_Fang 65 Electric P
+Wild_Charge 90 Electric P

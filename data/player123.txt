@@ -1,0 +1,11 @@
+Vaporeon  
+Hydro_Pump 110 Water S
+Surf 90 Water S
+Aqua_Tail 90 Water P
+Scald 80 Water S
+---
+Flareon
+Flamethrower 90 Fire S
+Fire_Fang 65 Fire P
+Flare_Blitz 120 Fire P
+Overheat 130 Fire S
